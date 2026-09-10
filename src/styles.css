@@ -95,8 +95,8 @@
   --silver: oklch(0.82 0.005 250);
   --gradient-hero: linear-gradient(
     180deg,
-    color-mix(in oklab, oklch(0.2 0.03 55) 55%, transparent),
-    color-mix(in oklab, oklch(0.16 0.03 60) 78%, transparent)
+    color-mix(in oklab, oklch(0.22 0.07 152) 62%, transparent),
+    color-mix(in oklab, oklch(0.14 0.05 155) 88%, transparent)
   );
   --gradient-green: linear-gradient(135deg, oklch(0.42 0.13 152), oklch(0.32 0.1 152));
   --shadow-soft: 0 18px 45px -22px oklch(0.28 0.045 50 / 0.45);
@@ -184,6 +184,37 @@
       color-mix(in oklab, var(--wood-deep) 5%, transparent) 0 2px,
       transparent 2px 23px
     );
+}
+
+@utility logo-glow {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -22%;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle at 50% 45%,
+      color-mix(in oklab, oklch(0.72 0.19 152) 55%, transparent) 0%,
+      color-mix(in oklab, oklch(0.55 0.16 152) 26%, transparent) 42%,
+      transparent 70%
+    );
+    filter: blur(26px);
+    animation: imperarte-glow 4.5s ease-in-out infinite;
+    z-index: -1;
+  }
+}
+
+@keyframes imperarte-glow {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
 }
 
 @utility rule-gold {
