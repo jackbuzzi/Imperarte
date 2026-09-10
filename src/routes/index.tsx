@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle, MapPin, Phone, Armchair } from "lucide-react";
 
-import logo from "@/assets/logo-claro.png.asset.json";
+import logo from "@/assets/logo.jpg.asset.json";
 import booth from "@/assets/booth.jpg.asset.json";
 import cadeirao from "@/assets/cadeirao.jpg.asset.json";
 import banqueta from "@/assets/banqueta.jpg.asset.json";
