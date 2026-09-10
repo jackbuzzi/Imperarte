@@ -65,11 +65,11 @@ function Index() {
         <div className="wood-grain absolute inset-0 -z-10 opacity-40" aria-hidden />
 
         <div className="mx-auto w-full max-w-2xl">
-          <div className="logo-glow mx-auto w-64 sm:w-80">
+          <div className="mx-auto w-fit rounded-2xl bg-background p-5 shadow-[0_0_0_1px_oklch(0.72_0.19_152/0.25),0_25px_60px_-20px_rgba(0,0,0,0.45)] ring-1 ring-emerald-700/10 sm:rounded-3xl sm:p-7">
             <img
               src={logo.url}
               alt="Logotipo Imperarte Móveis"
-              className="mx-auto h-auto w-full object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+              className="mx-auto h-auto w-52 object-contain sm:w-64"
             />
           </div>
 
