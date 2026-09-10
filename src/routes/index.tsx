@@ -65,11 +65,11 @@ function Index() {
         <div className="wood-grain absolute inset-0 -z-10 opacity-40" aria-hidden />
 
         <div className="mx-auto w-full max-w-2xl">
-          <div className="logo-glow mx-auto w-64 sm:w-80">
+          <div className="mx-auto w-fit rounded-2xl bg-background p-5 shadow-[0_0_0_1px_oklch(0.72_0.19_152/0.25),0_25px_60px_-20px_rgba(0,0,0,0.45)] ring-1 ring-emerald-700/10 sm:rounded-3xl sm:p-7">
             <img
               src={logo.url}
               alt="Logotipo Imperarte Móveis"
-              className="mx-auto h-auto w-full object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
+              className="mx-auto h-auto w-52 object-contain sm:w-64"
             />
           </div>
 
@@ -254,11 +254,11 @@ function Index() {
             "linear-gradient(180deg, oklch(0.24 0.06 152), oklch(0.16 0.045 155))",
         }}
       >
-        <div className="logo-glow mx-auto w-40">
+        <div className="mx-auto w-fit rounded-xl bg-background p-3 shadow-[0_0_0_1px_oklch(0.72_0.19_152/0.25),0_20px_45px_-15px_rgba(0,0,0,0.4)] ring-1 ring-emerald-700/10">
           <img
             src={logo.url}
             alt="Logotipo Imperarte Móveis"
-            className="mx-auto h-auto w-full object-contain"
+            className="mx-auto h-auto w-32 object-contain"
           />
         </div>
         <p className="mt-6 font-display text-2xl">Imperarte Móveis</p>
