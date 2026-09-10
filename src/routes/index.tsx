@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle, MapPin, Phone } from "lucide-react";
+import { MessageCircle, MapPin, Phone, Armchair } from "lucide-react";
 
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/logo-claro.png.asset.json";
 import booth from "@/assets/booth.jpg.asset.json";
 import cadeirao from "@/assets/cadeirao.jpg.asset.json";
 import banqueta from "@/assets/banqueta.jpg.asset.json";
@@ -36,6 +36,16 @@ const produtos = [
 ];
 
 const telefones = ["(47) 3644-7411", "(47) 3644-1919", "(47) 3644-8707"];
+
+const linhas = [
+  { nome: "Cadeiras", desc: "Modelos em madeira maciça, estofadas ou naturais." },
+  { nome: "Banquetas", desc: "Altas e médias, com ou sem encosto, para balcões e bares." },
+  { nome: "Cadeirão infantil", desc: "Segurança e acabamento impecável para os pequenos." },
+  { nome: "Mesas", desc: "Tampos e bases sob medida para cada ambiente." },
+  { nome: "Bistrôs", desc: "Conjuntos compactos e elegantes para cafés e varandas." },
+  { nome: "Booths", desc: "Estofados sob medida para restaurantes e lanchonetes." },
+  { nome: "Aparadores", desc: "Peças de apoio com desenho marcante em madeira." },
+];
 
 function Index() {
   return (
