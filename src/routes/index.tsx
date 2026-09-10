@@ -247,8 +247,14 @@ function Index() {
       </main>
 
       {/* RODAPÉ */}
-      <footer className="bg-wood-deep py-14 text-center text-background">
-        <div className="mx-auto w-32 rounded-lg bg-background/95 p-3">
+      <footer
+        className="py-14 text-center text-background"
+        style={{
+          background:
+            "linear-gradient(180deg, oklch(0.24 0.06 152), oklch(0.16 0.045 155))",
+        }}
+      >
+        <div className="logo-glow mx-auto w-40">
           <img
             src={logo.url}
             alt="Logotipo Imperarte Móveis"
