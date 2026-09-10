@@ -254,11 +254,11 @@ function Index() {
             "linear-gradient(180deg, oklch(0.24 0.06 152), oklch(0.16 0.045 155))",
         }}
       >
-        <div className="logo-glow mx-auto w-40">
+        <div className="mx-auto w-fit rounded-xl bg-background p-3 shadow-[0_0_0_1px_oklch(0.72_0.19_152/0.25),0_20px_45px_-15px_rgba(0,0,0,0.4)] ring-1 ring-emerald-700/10">
           <img
             src={logo.url}
             alt="Logotipo Imperarte Móveis"
-            className="mx-auto h-auto w-full object-contain"
+            className="mx-auto h-auto w-32 object-contain"
           />
         </div>
         <p className="mt-6 font-display text-2xl">Imperarte Móveis</p>
