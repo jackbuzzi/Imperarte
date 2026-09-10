@@ -127,6 +127,40 @@ function Index() {
           </div>
         </section>
 
+        {/* O QUE FABRICAMOS */}
+        <section
+          className="relative isolate overflow-hidden py-24 text-background"
+          style={{ background: "var(--gradient-green)" }}
+        >
+          <div className="wood-grain absolute inset-0 -z-10 opacity-25" aria-hidden />
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="text-center text-xs uppercase tracking-[0.35em] text-background/70">
+              Nossa fabricação
+            </p>
+            <h2 className="mt-4 text-center text-4xl font-semibold sm:text-5xl">
+              Móveis em madeira que a Imperarte faz
+            </h2>
+            <div className="rule-gold mx-auto mt-6 w-32" aria-hidden />
+            <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-background/85">
+              Cadeiras, banquetas, cadeirão infantil, mesas, bistrôs, booths e aparadores —
+              produção própria para lojistas, restaurantes, bares e cafés.
+            </p>
+
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {linhas.map((l) => (
+                <div
+                  key={l.nome}
+                  className="rounded-2xl border border-background/20 bg-background/10 p-6 text-left backdrop-blur-sm transition-transform hover:-translate-y-1"
+                >
+                  <Armchair className="h-6 w-6 text-background/80" aria-hidden />
+                  <h3 className="mt-4 text-2xl font-semibold text-background">{l.nome}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-background/80">{l.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* GALERIA */}
         <section className="wood-grain bg-secondary/50 py-24">
           <div className="mx-auto max-w-6xl px-6">
