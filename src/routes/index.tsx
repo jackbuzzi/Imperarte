@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle, MapPin, Phone } from "lucide-react";
+import { MessageCircle, MapPin, Phone, Armchair } from "lucide-react";
 
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/logo-claro.png.asset.json";
 import booth from "@/assets/booth.jpg.asset.json";
 import cadeirao from "@/assets/cadeirao.jpg.asset.json";
 import banqueta from "@/assets/banqueta.jpg.asset.json";
@@ -37,11 +37,21 @@ const produtos = [
 
 const telefones = ["(47) 3644-7411", "(47) 3644-1919", "(47) 3644-8707"];
 
+const linhas = [
+  { nome: "Cadeiras", desc: "Modelos em madeira maciça, estofadas ou naturais." },
+  { nome: "Banquetas", desc: "Altas e médias, com ou sem encosto, para balcões e bares." },
+  { nome: "Cadeirão infantil", desc: "Segurança e acabamento impecável para os pequenos." },
+  { nome: "Mesas", desc: "Tampos e bases sob medida para cada ambiente." },
+  { nome: "Bistrôs", desc: "Conjuntos compactos e elegantes para cafés e varandas." },
+  { nome: "Booths", desc: "Estofados sob medida para restaurantes e lanchonetes." },
+  { nome: "Aparadores", desc: "Peças de apoio com desenho marcante em madeira." },
+];
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* HERO */}
-      <header className="relative isolate flex min-h-[92svh] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
+      <header className="relative isolate flex min-h-[92svh] flex-col items-center justify-start overflow-hidden px-6 pb-16 pt-10 text-center sm:pt-14">
         <img
           src={booth.url}
           alt="Booth estofado fabricado pela Imperarte Móveis"
@@ -55,15 +65,15 @@ function Index() {
         <div className="wood-grain absolute inset-0 -z-10 opacity-40" aria-hidden />
 
         <div className="mx-auto w-full max-w-2xl">
-          <div className="mx-auto w-56 rounded-xl bg-background/95 p-5 shadow-[var(--shadow-lift)] sm:w-72">
+          <div className="logo-glow mx-auto w-64 sm:w-80">
             <img
               src={logo.url}
               alt="Logotipo Imperarte Móveis"
-              className="mx-auto h-auto w-full object-contain"
+              className="mx-auto h-auto w-full object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
             />
           </div>
 
-          <h1 className="mt-10 text-4xl font-semibold tracking-wide text-background sm:text-6xl">
+          <h1 className="mt-8 text-4xl font-semibold tracking-wide text-background sm:text-6xl">
             IMPERARTE MÓVEIS
           </h1>
           <div className="rule-gold mx-auto mt-6 w-40" aria-hidden />
@@ -113,6 +123,40 @@ function Index() {
                 loading="lazy"
                 className="h-full w-full bg-card object-contain p-8"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* O QUE FABRICAMOS */}
+        <section
+          className="relative isolate overflow-hidden py-24 text-background"
+          style={{ background: "var(--gradient-green)" }}
+        >
+          <div className="wood-grain absolute inset-0 -z-10 opacity-25" aria-hidden />
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="text-center text-xs uppercase tracking-[0.35em] text-background/70">
+              Nossa fabricação
+            </p>
+            <h2 className="mt-4 text-center text-4xl font-semibold sm:text-5xl">
+              Móveis em madeira que a Imperarte faz
+            </h2>
+            <div className="rule-gold mx-auto mt-6 w-32" aria-hidden />
+            <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-background/85">
+              Cadeiras, banquetas, cadeirão infantil, mesas, bistrôs, booths e aparadores —
+              produção própria para lojistas, restaurantes, bares e cafés.
+            </p>
+
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {linhas.map((l) => (
+                <div
+                  key={l.nome}
+                  className="rounded-2xl border border-background/20 bg-background/10 p-6 text-left backdrop-blur-sm transition-transform hover:-translate-y-1"
+                >
+                  <Armchair className="h-6 w-6 text-background/80" aria-hidden />
+                  <h3 className="mt-4 text-2xl font-semibold text-background">{l.nome}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-background/80">{l.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -203,8 +247,14 @@ function Index() {
       </main>
 
       {/* RODAPÉ */}
-      <footer className="bg-wood-deep py-14 text-center text-background">
-        <div className="mx-auto w-32 rounded-lg bg-background/95 p-3">
+      <footer
+        className="py-14 text-center text-background"
+        style={{
+          background:
+            "linear-gradient(180deg, oklch(0.24 0.06 152), oklch(0.16 0.045 155))",
+        }}
+      >
+        <div className="logo-glow mx-auto w-40">
           <img
             src={logo.url}
             alt="Logotipo Imperarte Móveis"
