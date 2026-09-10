@@ -51,7 +51,7 @@ function Index() {
   return (
     <div className="min-h-screen bg-background">
       {/* HERO */}
-      <header className="relative isolate flex min-h-[92svh] flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
+      <header className="relative isolate flex min-h-[92svh] flex-col items-center justify-start overflow-hidden px-6 pb-16 pt-10 text-center sm:pt-14">
         <img
           src={booth.url}
           alt="Booth estofado fabricado pela Imperarte Móveis"
@@ -65,15 +65,15 @@ function Index() {
         <div className="wood-grain absolute inset-0 -z-10 opacity-40" aria-hidden />
 
         <div className="mx-auto w-full max-w-2xl">
-          <div className="mx-auto w-56 rounded-xl bg-background/95 p-5 shadow-[var(--shadow-lift)] sm:w-72">
+          <div className="logo-glow mx-auto w-64 sm:w-80">
             <img
               src={logo.url}
               alt="Logotipo Imperarte Móveis"
-              className="mx-auto h-auto w-full object-contain"
+              className="mx-auto h-auto w-full object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)]"
             />
           </div>
 
-          <h1 className="mt-10 text-4xl font-semibold tracking-wide text-background sm:text-6xl">
+          <h1 className="mt-8 text-4xl font-semibold tracking-wide text-background sm:text-6xl">
             IMPERARTE MÓVEIS
           </h1>
           <div className="rule-gold mx-auto mt-6 w-40" aria-hidden />
