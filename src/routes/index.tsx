@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Imperarte Móveis: cadeiras, banquetas, mesas, bistrôs e booths em madeira para lojistas. Rio Negrinho - SC. Fale pelo WhatsApp (47) 99966-1025.",
+          "Imperarte Móveis: cadeiras, banquetas, mesas, bistrôs e booths em madeira para lojistas. Rio Negrinho - SC. Fale pelo WhatsApp (47) 99200-7200.",
       },
       { property: "og:title", content: "Imperarte Móveis | Novo site em construção" },
       {
@@ -21,13 +21,15 @@ export const Route = createFileRoute("/")({
         content:
           "Móveis em madeira com qualidade e personalidade para lojistas. Rio Negrinho - SC.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Index,
 });
 
 const WHATSAPP =
-  "https://wa.me/5547999661025?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20Imperarte%20M%C3%B3veis";
+  "https://wa.me/5547992007200?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20Imperarte%20M%C3%B3veis";
 
 const produtos = [
   { src: booth.url, alt: "Booth estofado em couro vermelho com base em madeira" },
@@ -229,7 +231,7 @@ function Index() {
               ))}
             </div>
             <p className="mt-8 font-display text-3xl font-semibold text-primary">
-              (47) 99966-1025
+              (47) 99200-7200
             </p>
             <p className="text-sm uppercase tracking-[0.25em] text-muted-foreground">WhatsApp</p>
             <a
