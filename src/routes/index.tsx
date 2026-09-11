@@ -37,7 +37,7 @@ const produtos = [
   { src: banqueta.url, alt: "Banqueta alta em madeira com encosto cruzado" },
 ];
 
-const telefones = ["(47) 3644-7411", "(47) 3644-1919", "(47) 3644-8707"];
+const telefones = ["(47) 3644-7411", "(47) 3644-1919"];
 
 const linhas = [
   { nome: "Cadeiras", desc: "Modelos em madeira maciça, estofadas ou naturais." },
