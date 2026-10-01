@@ -36,9 +36,9 @@ function Home() {
       {slides.map((slide, i) => <img key={slide.title} src={slide.image} alt={slide.title} className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-700 ${i === active ? 'opacity-100' : 'opacity-0'}`} />)}
       <div className="absolute inset-0 -z-10 bg-foreground/55" />
       <div className="mx-auto w-full max-w-7xl px-5 pb-16 pt-20 text-primary-foreground sm:px-8 sm:pb-20">
-        <p className="mb-4 text-xs font-bold uppercase text-silver">Imperarte Móveis / {slides[active].label}</p>
-        <h1 className="max-w-2xl text-5xl font-semibold leading-none sm:text-7xl">{slides[active].title}</h1>
-        <p className="mt-6 max-w-lg text-lg">{slides[active].text}</p>
+        <p className="mb-4 text-xs font-bold uppercase text-silver">Imperarte Móveis / {(slides[active] ?? slides[0])?.label}</p>
+        <h1 className="max-w-2xl text-5xl font-semibold leading-none sm:text-7xl">{(slides[active] ?? slides[0])?.title}</h1>
+        <p className="mt-6 max-w-lg text-lg">{(slides[active] ?? slides[0])?.text}</p>
         <div className="mt-9 flex flex-wrap gap-3"><Button asChild size="lg"><Link to="/produtos">Conheça os produtos <ArrowRight /></Link></Button><Button asChild size="lg" variant="secondary"><a href={quoteLink()} target="_blank" rel="noopener noreferrer"><MessageCircle /> Solicitar orçamento</a></Button></div>
         <div className="mt-10 flex items-center gap-3"><Button variant="secondary" size="icon" aria-label="Slide anterior" onClick={() => setActive((active + slides.length - 1) % slides.length)}><ArrowLeft /></Button>{slides.map((s, i) => <Button key={s.label} variant="ghost" size="icon" onClick={() => setActive(i)} aria-label={`Mostrar slide ${i + 1}`} className="h-8 w-8 text-primary-foreground">{String(i + 1).padStart(2, '0')}</Button>)}<Button variant="secondary" size="icon" aria-label="Próximo slide" onClick={() => setActive((active + 1) % slides.length)}><ArrowRight /></Button></div>
       </div>
