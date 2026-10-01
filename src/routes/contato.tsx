@@ -1,0 +1,12 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { MapPin, MessageCircle, Phone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { SiteHeader } from '@/components/site-header';
+import { SiteFooter } from '@/components/site-footer';
+import { quoteLink } from '@/lib/catalog';
+export const Route = createFileRoute('/contato')({ head: () => ({ meta: [
+  { title: 'Contato e localização | Imperarte Móveis' }, { name: 'description', content: 'Fale com a Imperarte Móveis pelo WhatsApp ou visite nossa fábrica em Rio Negrinho, SC.' },
+  { property: 'og:title', content: 'Contato e localização | Imperarte Móveis' }, { property: 'og:description', content: 'Entre em contato com a Imperarte Móveis e veja como chegar.' },
+  { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
+] }), component: Contact });
+function Contact() { return <><SiteHeader /><main><section className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-20"><p className="text-xs font-bold uppercase text-primary">Estamos à disposição</p><h1 className="mt-3 text-5xl font-semibold sm:text-6xl">Vamos conversar?</h1><div className="mt-12 grid gap-12 md:grid-cols-2"><div><h2 className="text-3xl font-semibold">Fale com a Imperarte</h2><p className="mt-4 text-muted-foreground">Para orçamentos e informações sobre nossos móveis, converse com Silvio.</p><p className="mt-7 text-2xl font-semibold text-primary">(47) 99200-7200</p><Button asChild size="lg" className="mt-5"><a href={quoteLink()} target="_blank" rel="noopener noreferrer"><MessageCircle /> Chamar no WhatsApp</a></Button><div className="mt-9 flex flex-col gap-3">{['(47) 3644-7411','(47) 3644-1919'].map(t => <a key={t} href={`tel:+55${t.replace(/\D/g, '')}`} className="flex items-center gap-2 text-muted-foreground hover:text-primary"><Phone className="h-4 w-4" />{t}</a>)}</div><div className="mt-10"><h2 className="text-3xl font-semibold">Onde estamos</h2><p className="mt-4 flex gap-3 leading-7 text-muted-foreground"><MapPin className="mt-1 h-5 w-5 shrink-0 text-primary" />Rua Domingos da Silva, 111<br />Bairro Campo Lençol<br />Rio Negrinho - SC · CEP 89295-260</p></div></div><iframe title="Mapa da Imperarte Móveis" src="https://www.google.com/maps?q=Rua%20Domingos%20da%20Silva%2C%20111%2C%20Campo%20Len%C3%A7ol%2C%20Rio%20Negrinho%20-%20SC%2C%2089295-260&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="min-h-[350px] w-full rounded-md border-0" /></div></section></main><SiteFooter /></>; }
