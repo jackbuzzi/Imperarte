@@ -5,4 +5,4 @@
 - [x] Rebuild the institutional home with a slide hero and catalogue preview
 - [x] Add the public products page with filters, lightbox, and WhatsApp quotes
 - [x] Add secure administrator sign-in and catalogue management
-- [ ] Verify desktop and mobile experiences
+- [x] Verify desktop and mobile experiences
