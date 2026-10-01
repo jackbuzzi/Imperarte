@@ -1,10 +1,3 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+- Keep public furniture data in the existing categories/products/product_images tables and use their RLS-backed browser client for reads and admin edits; this preserves the Cloud catalog as the single source of truth.
+- Keep administrator authorization in user_roles and enforce write access with database policies, never with a browser-side role flag; this prevents privilege escalation.
+- Store new catalog uploads in the public catalogo bucket with admin-only write policies; this makes images visible to visitors while protecting edits.
