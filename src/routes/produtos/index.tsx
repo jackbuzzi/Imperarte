@@ -1,4 +1,4 @@
-import { createFileRoute, useLocation } from '@tanstack/react-router';
+import { createFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -7,15 +7,14 @@ import { SiteFooter } from '@/components/site-footer';
 import { ProductCard } from '@/components/product-card';
 import { fetchCatalog } from '@/lib/catalog';
 
-export const Route = createFileRoute('/produtos/')({ head: () => ({ meta: [
+export const Route = createFileRoute('/produtos/')({ validateSearch: (search: Record<string, unknown>): { categoria?: string } => ({ categoria: typeof search['categoria'] === 'string' ? search['categoria'] : undefined }), head: () => ({ meta: [
   { title: 'Produtos | Imperarte Móveis' }, { name: 'description', content: 'Conheça as cadeiras, banquetas, mesas, bistrôs, booths e aparadores da Imperarte Móveis e peça orçamento.' },
   { property: 'og:title', content: 'Produtos | Imperarte Móveis' }, { property: 'og:description', content: 'Móveis em madeira com personalidade. Explore a coleção Imperarte.' },
   { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
 ] }), component: ProductsPage });
 
 function ProductsPage() {
-  const location = useLocation();
-  const categoria = typeof location.search['categoria'] === 'string' ? location.search['categoria'] : undefined;
+  const { categoria } = Route.useSearch();
   const [selected, setSelected] = useState('all');
   const { data, isPending, error } = useQuery({ queryKey: ['catalog'], queryFn: fetchCatalog });
   useEffect(() => { setSelected(data?.categories.find(c => c.slug === categoria)?.id ?? 'all'); }, [categoria, data]);
