@@ -7,7 +7,7 @@ import { SiteFooter } from '@/components/site-footer';
 import { ProductCard } from '@/components/product-card';
 import { fetchCatalog } from '@/lib/catalog';
 
-export const Route = createFileRoute('/produtos/')({ validateSearch: (search: Record<string, unknown>): { categoria?: string } => ({ categoria: typeof search['categoria'] === 'string' ? search['categoria'] : undefined }), head: () => ({ meta: [
+export const Route = createFileRoute('/produtos/')({ validateSearch: (search: Record<string, unknown>): { categoria?: string } => typeof search['categoria'] === 'string' ? { categoria: search['categoria'] } : {}, head: () => ({ meta: [
   { title: 'Produtos | Imperarte Móveis' }, { name: 'description', content: 'Conheça as cadeiras, banquetas, mesas, bistrôs, booths e aparadores da Imperarte Móveis e peça orçamento.' },
   { property: 'og:title', content: 'Produtos | Imperarte Móveis' }, { property: 'og:description', content: 'Móveis em madeira com personalidade. Explore a coleção Imperarte.' },
   { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
