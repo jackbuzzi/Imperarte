@@ -1,3 +1,5 @@
 - Keep public furniture data in the existing categories/products/product_images tables and use their RLS-backed browser client for reads and admin edits; this preserves the Cloud catalog as the single source of truth.
 - Keep administrator authorization in user_roles and enforce write access with database policies, never with a browser-side role flag; this prevents privilege escalation.
 - Store new catalog uploads in the public catalogo bucket with admin-only write policies; this makes images visible to visitors while protecting edits.
+
+- Keep home slides in the RLS-backed home_slides table and edit them through the existing admin panel; this keeps public slide content synchronized with administrator changes.
