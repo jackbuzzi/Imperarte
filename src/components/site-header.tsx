@@ -8,8 +8,8 @@ import logo from '@/assets/logo.jpg.asset.json';
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return <header className="relative z-30 border-b border-border bg-background">
-    <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
-      <Link to="/" aria-label="Imperarte Móveis, início"><img src={logo.url} alt="Imperarte Móveis" className="h-14 w-36 object-contain object-left" /></Link>
+    <div className="mx-auto flex h-24 max-w-7xl items-center justify-between gap-4 px-5 sm:h-28 sm:px-8">
+      <Link to="/" aria-label="Imperarte Móveis, início"><img src={logo.url} alt="Imperarte Móveis" className="h-20 w-44 object-contain object-left sm:h-24 sm:w-52" /></Link>
       <nav className="hidden items-center gap-8 text-sm font-semibold uppercase md:flex">
         <Link to="/" activeProps={{ className: 'text-primary' }}>Início</Link>
         <Link to="/produtos" activeProps={{ className: 'text-primary' }}>Produtos</Link>

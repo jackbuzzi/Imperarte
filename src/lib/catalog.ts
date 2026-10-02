@@ -3,6 +3,13 @@ import type { Tables } from '@/integrations/supabase/types';
 
 export type Category = Tables<'categories'>;
 export type Product = Tables<'products'> & { product_images?: Tables<'product_images'>[] };
+export type HomeSlide = Tables<'home_slides'>;
+
+export async function fetchHomeSlides() {
+  const { data, error } = await supabase.from('home_slides').select('*').eq('is_active', true).order('display_order');
+  if (error) throw error;
+  return data;
+}
 
 export async function fetchCatalog() {
   const [categories, products] = await Promise.all([
