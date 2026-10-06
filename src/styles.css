@@ -65,6 +65,7 @@
   --color-silver: var(--silver);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-catalog: var(--font-body);
 }
 
 
@@ -169,7 +170,7 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
 }
 
