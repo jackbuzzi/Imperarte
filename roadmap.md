@@ -9,4 +9,4 @@
 - [x] Show category covers, featured product carousel, and full contact area on home
 - [x] Let admins edit slide images/text and browse products by category
 - [x] Enlarge header and footer logos; verify mobile and desktop flows
-- [ ] Modernize product/category titles and expose category choice in new-product registration; verify both flows
+- [x] Modernize product/category titles and expose category choice in new-product registration; verify both flows

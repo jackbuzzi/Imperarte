@@ -3,3 +3,4 @@
 - Store new catalog uploads in the public catalogo bucket with admin-only write policies; this makes images visible to visitors while protecting edits.
 
 - Keep home slides in the RLS-backed home_slides table and edit them through the existing admin panel; this keeps public slide content synchronized with administrator changes.
+- Use the semantic catalog font token for product/category titles and keep category selection independent of edit state in the product form; this keeps presentation consistent and category assignment available before first save.
