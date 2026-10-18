@@ -34,8 +34,8 @@ export function EssenceGallery({ photos, className }: { photos: GalleryPhoto[]; 
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 border-0 bg-background/85 backdrop-blur data-[state=inactive]:opacity-100" aria-label="Foto anterior" onClick={() => setPaused(true)} />
-        <CarouselNext className="right-3 top-1/2 -translate-y-1/2 border-0 bg-background/85 backdrop-blur data-[state=inactive]:opacity-100" aria-label="Próxima foto" onClick={() => setPaused(true)} />
+        <CarouselPrevious className="left-3 top-1/2 -translate-y-1/2 border-0 bg-background/85 backdrop-blur" aria-label="Foto anterior" />
+        <CarouselNext className="right-3 top-1/2 -translate-y-1/2 border-0 bg-background/85 backdrop-blur" aria-label="Próxima foto" />
       </div>
       <div className="mt-4 flex items-center justify-between gap-4">
         <p className="text-sm font-semibold text-muted-foreground">{photos[active]?.label}</p>
