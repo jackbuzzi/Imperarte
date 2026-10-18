@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { ProductCard } from '@/components/product-card';
+import { EssenceGallery } from '@/components/essence-gallery';
 import { fetchCatalog, fetchHomeSlides, quoteLink } from '@/lib/catalog';
 import alasca from '@/assets/products/cadeira-alasca.png.asset.json';
 import booth from '@/assets/products/booth-capitone-duplo.jpg.asset.json';
@@ -30,6 +31,11 @@ const fallbackSlides = [
   { id: 'banquetas', image_url: banqueta.url, label: 'Banquetas', title: 'Presença em cada ambiente', description: 'Peças versáteis para bares, cafés e projetos especiais.' },
 ];
 const mapUrl = 'https://www.google.com/maps?q=Rua%20Domingos%20da%20Silva%2C%20111%2C%20Campo%20Len%C3%A7ol%2C%20Rio%20Negrinho%20-%20SC%2C%2089295-260&output=embed';
+const essencePhotos = [
+  { src: aparadorCozinha.url, alt: 'Aparador de madeira com rodízios, gavetas e nichos, ao lado de mesa e cadeiras de jantar', label: 'Aparador e mesa de jantar' },
+  { src: boothVermelho.url, alt: 'Booth estofado vermelho com base de madeira e mesa de restaurante', label: 'Booths para restaurantes' },
+  { src: mesaEvento.url, alt: 'Mesas retangulares de madeira em salão de eventos com iluminação quente', label: 'Mesas para eventos' },
+];
 
 function Home() {
   const [active, setActive] = useState(0);
