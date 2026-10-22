@@ -4,3 +4,4 @@
 
 - Keep home slides in the RLS-backed home_slides table and edit them through the existing admin panel; this keeps public slide content synchronized with administrator changes.
 - Use the semantic catalog font token for product/category titles and keep category selection independent of edit state in the product form; this keeps presentation consistent and category assignment available before first save.
+- Keep social profile URLs in one exported constant in src/lib/catalog.ts and render them only through the shared social button component with semantic color tokens; this keeps one follow link and one look across the site.
