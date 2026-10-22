@@ -63,6 +63,10 @@
   --color-wood-deep: var(--wood-deep);
   --color-leather: var(--leather);
   --color-silver: var(--silver);
+  --color-instagram: var(--instagram);
+  --color-instagram-deep: var(--instagram-deep);
+  --color-instagram-foreground: var(--instagram-foreground);
+  --shadow-instagram: 0 14px 34px -16px color-mix(in oklab, var(--instagram) 70%, transparent);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-catalog: var(--font-body);
@@ -94,6 +98,16 @@
   --wood-deep: oklch(0.28 0.045 50);
   --leather: oklch(0.45 0.15 20);
   --silver: oklch(0.82 0.005 250);
+  --instagram: oklch(0.56 0.23 350);
+  --instagram-deep: oklch(0.44 0.19 312);
+  --instagram-foreground: oklch(0.98 0.01 85);
+  --gradient-instagram: linear-gradient(
+    135deg,
+    oklch(0.76 0.16 62) 0%,
+    oklch(0.66 0.24 20) 32%,
+    oklch(0.56 0.25 340) 64%,
+    oklch(0.47 0.2 302) 100%
+  );
   --gradient-hero: linear-gradient(
     180deg,
     color-mix(in oklab, oklch(0.22 0.07 152) 62%, transparent),
@@ -135,6 +149,9 @@
   --muted-foreground: oklch(0.704 0.04 256.788);
   --accent: oklch(0.279 0.041 260.031);
   --accent-foreground: oklch(0.984 0.003 247.858);
+  --instagram: oklch(0.68 0.2 350);
+  --instagram-deep: oklch(0.55 0.2 312);
+  --instagram-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(1 0 0 / 10%);
@@ -216,6 +233,10 @@
     opacity: 1;
     transform: scale(1.06);
   }
+}
+
+@utility instagram-surface {
+  background-image: var(--gradient-instagram);
 }
 
 @utility rule-gold {
