@@ -22,3 +22,6 @@ export async function fetchCatalog() {
 }
 
 export const quoteLink = (name?: string) => `https://wa.me/5547992007200?text=${encodeURIComponent(name ? `Olá! Gostaria de pedir um orçamento para ${name}.` : 'Olá! Gostaria de falar com a Imperarte Móveis.')}`;
+
+export const instagramUrl = 'https://www.instagram.com/moveisimperarte';
+export const instagramHandle = '@moveisimperarte';

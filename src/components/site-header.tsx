@@ -3,6 +3,7 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { quoteLink } from '@/lib/catalog';
+import { InstagramButton } from '@/components/instagram-button';
 import logo from '@/assets/logo.jpg.asset.json';
 
 export function SiteHeader() {
@@ -15,9 +16,11 @@ export function SiteHeader() {
         <Link to="/produtos" activeProps={{ className: 'text-primary' }}>Produtos</Link>
         <Link to="/contato" activeProps={{ className: 'text-primary' }}>Contato</Link>
       </nav>
+      <InstagramButton variant="outline" className="hidden lg:inline-flex" />
       <div className="hidden md:block"><Button asChild><a href={quoteLink()} target="_blank" rel="noopener noreferrer"><MessageCircle /> Solicitar orçamento</a></Button></div>
+      <InstagramButton variant="icon" className="md:hidden" />
       <Button variant="ghost" size="icon" className="md:hidden" aria-label={open ? 'Fechar menu' : 'Abrir menu'} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
-    {open && <nav className="flex flex-col gap-1 border-t border-border px-5 py-4 text-sm font-semibold uppercase md:hidden" onClick={() => setOpen(false)}><Link className="py-3" to="/">Início</Link><Link className="py-3" to="/produtos">Produtos</Link><Link className="py-3" to="/contato">Contato</Link><a className="py-3 text-primary" href={quoteLink()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a></nav>}
+    {open && <nav className="flex flex-col gap-1 border-t border-border px-5 py-4 text-sm font-semibold uppercase md:hidden" onClick={() => setOpen(false)}><Link className="py-3" to="/">Início</Link><Link className="py-3" to="/produtos">Produtos</Link><Link className="py-3" to="/contato">Contato</Link><a className="py-3 text-primary" href={quoteLink()} target="_blank" rel="noopener noreferrer">Solicitar orçamento</a><InstagramButton className="mt-3 w-full" showHandle /></nav>}
   </header>;
 }

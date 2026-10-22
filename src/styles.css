@@ -66,6 +66,7 @@
   --color-instagram: var(--instagram);
   --color-instagram-deep: var(--instagram-deep);
   --color-instagram-foreground: var(--instagram-foreground);
+  --shadow-instagram: 0 14px 34px -16px color-mix(in oklab, var(--instagram) 70%, transparent);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-catalog: var(--font-body);
