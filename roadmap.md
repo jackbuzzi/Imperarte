@@ -10,3 +10,4 @@
 - [x] Let admins edit slide images/text and browse products by category
 - [x] Enlarge header and footer logos; verify mobile and desktop flows
 - [x] Modernize product/category titles and expose category choice in new-product registration; verify both flows
+- [x] Add prominent Instagram follow button and text in header, home, contact page, and footer; verify both sizes
